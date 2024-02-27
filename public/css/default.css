@@ -1,0 +1,250 @@
+body {
+	margin:  0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #ffffff; 
+}
+
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: none;
+    z-index: 1000; 
+
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    border-radius: 5px;
+    font-weight: 900;
+
+    
+}
+
+.cart-link {
+    text-decoration: none; 
+}
+
+body.loaded header {
+    transition: top 0.5s ease;
+}
+
+header.hide {
+    top: -100%; 
+}
+
+.headerText {
+    font-weight: 900;
+}
+
+.dropdown-item:active {
+    background-color: #ccc;
+}
+
+
+@media (max-width: 769px) and (min-width: 514px) {
+    .navbar .logo {
+        width: 40px; 
+        height: 40px; 
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+    }
+    .navbar .btn {
+        font-size: 14px;
+    }
+    .navbar .icons img {
+        width: 20px; 
+        height: 20px; 
+    }
+    .language {
+        width: 20px;
+        height: 12px;
+    }
+    
+}
+
+@media (max-width: 513px) and (min-width: 387px) {
+    .navbar .logo {
+        width: 30px; 
+        height: 30px; 
+    }
+
+    .navbar-brand {
+        font-size: 14px;
+    }
+
+    .navbar .btn {
+        font-size: 10px;
+    }
+
+    .navbar .icons img {
+        width: 18px; 
+        height: 18px; 
+    }
+
+    .language {
+        width: 20px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 386px) {
+    .navbar .logo {
+        width: 15px; 
+        height: 15px; 
+    }
+
+    .navbar-brand {
+        font-size: 12px;
+    }
+
+    .navbar .btn {
+        font-size: 8px;
+    }
+
+    .navbar .icons img {
+        width: 16px; 
+        height: 16px; 
+    }
+
+    .language {
+        width: 20px;
+        height: 12px;
+    }
+}
+
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+#bannerText {
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#bannerTextSmall {
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-section {
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end; 
+    text-align: left;
+    margin-top: 30px;
+    padding-left: 100px; 
+    padding-bottom: 100px; 
+    color: white;
+
+    
+}
+
+.cart-count {
+
+    font-size: 0.75em; 
+    padding: 0.25em 0.4em; 
+
+}
+
+
+@media (min-width: 960px) {
+    .banner-section {
+        background-image: url('https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/ss24_soccer_mls_us_mh_2_d_6a4524c2c4.png');
+    }
+}
+
+@media (min-width: 361px) and (max-width: 959px) {
+    .banner-section {
+        background-image: url('https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_960,w_960/ss24_soccer_mls_us_mh_1_t_69cf3f5940.png');
+    }
+}
+
+@media (max-width: 360px) {
+    .banner-section {
+        background-image: url('https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_600,w_600/ss24_soccer_mls_us_mh_1_m_3467f6853c.png');
+    }
+}
+
+a.btn {
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+a.btn:hover, a.btn:focus {
+    color: #b4b4b4;
+    transform: scale(1.05);
+}
+
+
+.nav-item a img {
+    transition: opacity 0.3s ease; 
+}
+
+.nav-item a:hover img, .nav-item a:focus img {
+    opacity: 0.4;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover, .cta-button:focus {
+    background-color: #000000; 
+    color: white;
+    text-decoration: none;
+}
+
+.gl-icon {
+    fill: currentColor; 
+    margin-left: 8px;
+}
+
+
+.gl-icon {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+.mainmain {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    border-radius: 5px;
+}
+
+
+
+
+
+.nav-item a:hover { 
+    color: #ccc !important; }
+
+footer { 
+    color: white; 
+    margin-top: 270px; 
+    padding: 10px 0; 
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+

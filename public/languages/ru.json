@@ -1,0 +1,112 @@
+{
+    "Language": "Russian",
+    "language": "russian",
+    "lang": "ru",
+    "english": "Анлгийский",
+    "russian": "Русский",
+
+    "sign": "ВОЙТИ",
+    "shoes": "ОБУВИ",
+    "accessories": "АКСЕССУАРЫ",
+    "madeBy": "Сделал: Бактыбайулы Амандык, SE-2202",
+
+    "mainTitle": "Магазин обуви",
+    "bannerText": "НАША ОБУВЬ, ВАША ЛЮБОВЬ",
+    "bannerTextSmall": "Добро пожаловать в магазин обуви",
+    "shopNow": "НАЧАТЬ ПОКУПКИ",
+
+    "signTitle": "Авторизация",
+    "signUp": "Регистрация",
+    "signIn": "Вход",
+    "fullName": "Имя",
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "confirmPassword": "Подтвердите пароль",
+    "register": "Зарегистрироватся",
+    "login": "Войти",
+    "back": "Вернутся",
+
+    "weatherForecast" : "Погода",
+    "weatherChart": "График",
+
+    "forecastTitle": "Прогноз Погоды",
+    "logout": "ВЫЙТИ",
+    "adminPage": "ПРОФИЛЬ АДМИНА",
+    "history": "ИСТОРИЯ",
+    "cityExample": "*Напр. Atyrau*",
+    "forecastButton": "Получить Прогноз",
+
+
+
+
+    "adminPageTitle": "Профиль Админа",
+    "name": "Имя",
+    "createdAt": "Создан",
+    "lastLogged": "Последний Вход",
+    "updatedAt": "Обновлен",
+    "isAdmin": "Админ",
+    "actions": "Действие",
+    "addUser": "Добавить Пользователя",
+    "cancel": "Отмена",
+    "add": "Добавить",
+    "changeUser": "Изменить",
+    "edit": "Изменить",
+    "save": "Сохранить",
+    "delete": "Удалить",
+
+    "requestTime": "Дата запроса",
+    "historyActions": "Действие",
+    "downloadPdf": "Скачать PDF",
+    
+    "shoesTitle": "Обуви",
+    "main": "Главная",
+    "shoesText": "Обуви",
+    "color": "Цвет: ",
+
+    "accessoriesTitle": "Аксессуары",
+    "accessoriesText": "Аксессуары",
+
+    "personalData": "Персональные Данные",
+    "changePassword": "Поменять Пароль",
+    "oldPassword": "Старый Пароль",
+    "newPassword": "Новый Пароль",
+    "saveChanges": "СОХРАНИТЬ ИЗМЕНЕНИЯ",
+    "confirmLogout": "Вы уверены что хотите выйти?",
+    "yes": "Да",
+    "no": "Нет",
+
+    "orders": "Заказы",
+    "profile": "Профиль",
+    "products": "Продукты",
+    "users": "Пользователи",
+
+    "addProduct": "Добавить Продукт",
+    "changeProduct": "Изменить",
+    "nameProductEn": "Название(en)",
+    "nameProductRu": "Название(ru)",
+    "collectionName": "Коллекция",
+    "productTypeEn": "Тип(en)",
+    "productTypeRu": "Тип(ru)",
+    "priceProduct": "Цена",
+    "colorProduct": "Цвет",
+    "imageProduct": "Фото",
+    "isFeatured": "Показан",
+    "inStock": "В Наличии",
+
+    "cart": "Корзина",
+    "cartTitle": "Корзина",
+    "quantity": "Количество",
+    "removeFromCart": "Убрать",
+    "checkout": "ОФОРМИТЬ",
+    "orderSummary": "Заказ",
+    "total": "Полная сумма",
+    "includingVAT": "НДС включительно",
+
+    "currency": "Сколько будет 1 доллар в тенге, рубль и сум?",
+    "catFact": "Внимание! Это очень важная информация!",
+    "catPhoto": "Это фото кота сделает вас счастливым!",
+
+    "bonus": "BONUS"
+
+}
+  

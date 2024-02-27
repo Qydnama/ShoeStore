@@ -1,0 +1,128 @@
+[
+    {
+        "correctAnswer": 1,
+        "questions": {
+            "en": "Which brand introduced the 'Air Jordan' sneakers?",
+            "ru": "Какой бренд представил кроссовки 'Air Jordan'?"
+        },
+        "option": [
+            {
+            "en": "Adidas",
+            "ru": "Adidas"
+            },
+            {
+            "en": "Nike",
+            "ru": "Nike"
+            },
+            {
+            "en": "Puma",
+            "ru": "Puma"
+            },
+            {
+            "en": "Reebok",
+            "ru": "Reebok"
+            }
+        ]
+    },
+    {
+        "correctAnswer": 1,
+        "questions": {
+          "en": "What is the main purpose of running shoes?",
+          "ru": "Каково основное назначение кроссовок для бега?"
+        },
+        "option": [
+          {
+            "en": "To enhance grip while climbing",
+            "ru": "Для улучшения сцепления при лазании"
+          },
+          {
+            "en": "To provide stability and cushioning for running",
+            "ru": "Для обеспечения стабильности и амортизации при беге"
+          },
+          {
+            "en": "For fashion and style",
+            "ru": "Для моды и стиля"
+          },
+          {
+            "en": "To increase jumping ability",
+            "ru": "Для увеличения способности к прыжкам"
+          }
+        ]
+    },
+    {
+        "correctAnswer": 2,
+        "questions": {
+          "en": "Which part of a sports shoe provides cushioning and support?",
+          "ru": "Какая часть спортивной обуви обеспечивает амортизацию и поддержку?"
+        },
+        "option": [
+          {
+            "en": "The outsole",
+            "ru": "Подошва"
+          },
+          {
+            "en": "The insole",
+            "ru": "Стелька"
+          },
+          {
+            "en": "The midsole",
+            "ru": "Промежуточная подошва"
+          },
+          {
+            "en": "The lace",
+            "ru": "Шнурки"
+          }
+        ]
+    },
+    {
+        "correctAnswer": 1,
+        "questions": {
+          "en": "In which year was the first pair of Nike Air Max shoes released?",
+          "ru": "В каком году была выпущена первая пара кроссовок Nike Air Max?"
+        },
+        "option": [
+          {
+            "en": "1978",
+            "ru": "1978"
+          },
+          {
+            "en": "1987",
+            "ru": "1987"
+          },
+          {
+            "en": "1990",
+            "ru": "1990"
+          },
+          {
+            "en": "2000",
+            "ru": "2000"
+          }
+        ]
+    },
+    {
+        "correctAnswer": 0,
+        "questions": {
+          "en": "What is the name of Adidas's technology that consists of small plastic balls for cushioning?",
+          "ru": "Как называется технология Adidas, которая состоит из маленьких пластиковых шариков для амортизации?"
+        },
+        "option": [
+          {
+            "en": "Boost",
+            "ru": "Boost"
+          },
+          {
+            "en": "Air",
+            "ru": "Air"
+          },
+          {
+            "en": "Gel",
+            "ru": "Gel"
+          },
+          {
+            "en": "Foam",
+            "ru": "Foam"
+          }
+        ]
+    }
+]
+  

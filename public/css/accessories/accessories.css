@@ -1,0 +1,72 @@
+.subnav {
+    font-size: 1rem; 
+}
+
+.subnav-item {
+    color: #000; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.subnav-item:hover {
+    text-decoration: underline; 
+}
+
+
+.card {
+    position: relative;
+
+}
+
+.card-cart-button {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+}
+
+
+
+
+.card-cart-button a img {
+    transition: opacity 0.3s ease; 
+}
+
+.card-cart-button a:hover img, .card-cart-button a:focus img {
+    opacity: 0.6; 
+}
+
+.card-cart-button a img {
+    width: 24px; 
+}
+
+.highlight {
+    opacity: 0.1; 
+}
+
+
+
+.card-footer {
+    bottom: 0;
+    width: 100%;
+    background: #fff; 
+}
+
+
+.card-footer small {
+    font-size: 0.8rem;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .card-footer {
+        position: static;
+    }
+    .card-body .card-price {
+        position: static;
+        font-size: 1rem; 
+    }
+}
+

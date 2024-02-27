@@ -1,0 +1,117 @@
+{
+    "Language": "English",
+    "language": "english",
+    "lang": "en",
+    "english": "English",
+    "russian": "Russian",
+
+    "sign": "SIGN  IN | UP",
+    "shoes": "SHOES",
+    "accessories": "ACCESSORIES",
+    "madeBy": "Made by: Baktybaiuly Amandyk, SE-2202",
+
+    "mainTitle": "Shoe App",
+    "bannerText": "OUR SHOES, YOUR LOVE",
+    "bannerTextSmall": "Welcome to our Shoe Store",
+    "shopNow": "SHOP NOW",
+
+
+    "signTitle": "Authorization",
+    "signUp": "Sign Up",
+    "signIn": "Sign In",
+    "fullName": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "register": "Register",
+    "login": "Login",
+    "back": "Go Back",
+
+
+    "logout": "LOG OUT",
+    "adminPage": "ADMIN PAGE",
+    "history": "HISTORY",
+
+    
+    "adminPageTitle": "Admin Page",
+    "name": "Name",
+    "createdAt": "Created At",
+    "lastLogged": "Last Logged",
+    "updatedAt": "Updated At",
+    "isAdmin": "Admin",
+    "actions": "Actions",
+    "addUser": "Add User",
+    "cancel": "Cancel",
+    "add": "Add",
+    "changeUser": "Change User",
+    "edit": "Edit",
+    "save": "Save",
+    "delete": "Delete",
+
+    "requestTime": "Request Date",
+    "historyActions": "Action",
+    "downloadPdf": "Download PDF",
+
+
+    "shoesTitle": "Shoes",
+    "main": "Main",
+    "shoesText": "Shoes",
+    "color": "Color: ",
+
+    "accessoriesTitle": "Accessories",
+    "accessoriesText": "Accessories",
+
+
+    "personalData": "Personal Data",
+    "changePassword": "Change Password",
+    "oldPassword": "Old Password",
+    "newPassword": "New Password",
+    "saveChanges": "SAVE CHANGES",
+    "confirmLogout": "Are you sure you wanna log out?",
+    "yes": "Yes",
+    "no": "No",
+
+    "orders": "Orders",
+    "profile": "Profile",
+    "products": "Products",
+    "users": "Users",
+
+    "addProduct": "Add Product",
+    "changeProduct": "Edit Product",
+    "nameProductEn": "Name(en)",
+    "nameProductRu": "Name(ru)",
+    "collectionName": "Collection",
+    "productTypeEn": "Type(en)",
+    "productTypeRu": "Type(ru)",
+    "priceProduct": "Price",
+    "colorProduct": "Color",
+    "imageProduct": "Image",
+    "isFeatured": "Is Featured",
+    "inStock": "In Stock",
+
+    "cart": "Cart",
+    "cartTitle": "Cart",
+    "quantity": "Quantity",
+    "removeFromCart": "Remove",
+    "checkout": "CHECKOUT",
+    "orderSummary": "Order Summary",
+    "total": "Total",
+    "includingVAT": "including VAT",
+
+    "currency": "How Much Is 1 Dollar in Tenge, Ruble and Sum?",
+    "catFact": "Attention! This information is very important!",
+    "catPhoto": "This Cat Photo will make you happy!",
+
+    "bonus": "BONUS"
+
+
+
+
+
+
+    
+
+
+
+
+}

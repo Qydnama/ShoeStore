@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="<%= locale.lang %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= locale.adminPageTitle %></title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- OWN CSS, JS -->
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/admin/admin.css">
+    <script defer src="/js/default/navbar.js"></script>
+    <script defer src="/js/default/cart.js"></script>
+    <script defer src="/js/admin/admin-products.js"></script>
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-white">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Логотип и название магазина слева -->
+                <div class="d-flex align-items-center">
+                    <img class="logo" src="/images/favicon.png" alt="Logo" width="50" height="50">
+                    <a class="navbar-brand ms-2 text-dark" href="/">SHOE STORE</a>
+                </div>
+                
+                <!-- Ссылки на обувь и аксессуары посередине -->
+                <div class="d-flex justify-content-center flex-grow-1">
+                    <div class="nav-item d-flex align-items-center mx-2">
+                        <a class="btn text-dark" href="/shoes?lang=<%= locale.lang %>" style="font-weight: 700;"><%= locale.shoes %></a>
+                    </div>
+                    <div class="nav-item d-flex align-items-center mx-2">
+                        <a class="btn text-dark" href="/accessories?lang=<%= locale.lang %>" style="font-weight: 700;"><%= locale.accessories %></a>
+                    </div>
+                    <div class="nav-item d-flex align-items-center mx-2">
+                        <a class="btn text-dark" href="/quiz?lang=<%= locale.lang %>" style="font-weight: 700;"><%= locale.bonus %></a>
+                    </div>
+                </div>
+                
+                
+                <!-- Иконки корзины и профиля справа -->
+                <div class="d-flex align-items-center icons">
+                    <div class="nav-item">
+                        <a href="/cart?lang=<%= locale.lang %>" class="cart-link">
+                            <img src="/images/header/cart.svg" alt="Cart" width="24" height="24">
+                            <span class="cart-count top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0 <!-- Сюда будет подставляться количество товаров -->
+                            </span>
+                        </a>
+                    </div>
+                    <div class="nav-item mx-2">
+                        <a href="/profile?lang=<%= locale.lang %>">
+                            <img src="/images/header/profile.svg" alt="Profile" width="24" height="24">
+                        </a>
+                    </div>
+                    <div class="nav-item mx-2">
+                        <div class="dropdown me-3 language-selector">
+                            <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;color: black">
+                                <img class="language" src="/images/flags/<%= locale.language %>.png" alt="<%= locale.language %>" style="width: 30px; height: 20px;">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-md-end dropdown-menu-sm-start" aria-labelledby="Dropdown">
+                                <li class="d-flex align-items-center">
+                                    <a class="dropdown-item active bg-dark" href="#">
+                                            <img class="language" src="/images/flags/<%= locale.language %>.png" alt="Russian" style="width: 30px;"> <%= locale.Language %>
+                                        <i class="fa fa-check text-success ms-2"></i>
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="d-flex align-items-center">
+                                    <% if (locale.lang === 'ru') { %>
+                                        <a class="dropdown-item" href="/profile/admin/products?type=<%= type %>&lang=en">
+                                            <img class="language" src="/images/flags/english.png" alt="English" style="width: 30px;"> English 
+                                        </a>
+                                    <% } else if (locale.lang === 'en') { %>
+                                        <a class="dropdown-item" href="/profile/admin/products?type=<%= type %>&lang=ru">
+                                            <img class="language" src="/images/flags/russian.png" alt="Russian" style="width: 30px;"> Русский
+                                        </a>
+                                    <% } %>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    
+    <main>
+        <div class="container-xl" id="productTypeA" data-product-type="<%= type %>">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <ul class="nav nav-pills d-flex align-items-center" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a href="/profile/admin/users?lang=<%= locale.lang %>" class="nav-link bg-white text-dark"><%= locale.users %></a>
+                    </li>
+                    <li class="nav-item ms-1" role="presentation">
+                        |
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link bg-white text-primary active" id="pills-products-tab" data-bs-toggle="pill" data-bs-target="#pills-products" role="tab" aria-controls="pills-products" aria-selected="true"><%= locale.products %></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group ms-3">
+                <a id="button1" href="/profile/admin/products?type=shoes&lang=<%= locale.lang %>" type="button" class="btn btn-secondary active"><%= locale.shoes %></a>
+                <a id="button2" href="/profile/admin/products?type=accessories&lang=<%= locale.lang %>" type="button" class="btn btn-secondary"><%= locale.accessories %></a>
+            </div>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-products" role="tabpanel" aria-labelledby="pills-products-tab">
+                    <div class="table-responsive">
+                        <div class="table-wrapper">
+                            <div class="table-title">
+                                <div class="row">
+                                    <div class="col-sm-6 ms-3">
+                                        <button class="btn btn-primary mt-3 mb-3" data-bs-toggle="modal" data-bs-target="#addProductModal"><i class="material-icons">&#xE147;</i> <span><%= locale.addProduct %></span></button>			
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th><%= locale.nameProductEn %></th>
+                                        <th><%= locale.nameProductRu %></th>
+                                        <th><%= locale.collectionName %></th>
+                                        <th><%= locale.productTypeEn %></th>
+                                        <th><%= locale.productTypeRu %></th>
+                                        <th><%= locale.priceProduct %></th>
+                                        <th><%= locale.colorProduct %></th>
+                                        <th><%= locale.imageProduct %></th>
+                                        <th><%= locale.isFeatured %></th>
+                                        <th><%= locale.inStock %></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="productTableBody">
+                                    <% products.forEach(product => { %>
+                                    <tr>
+                                        <th class="th-max-width"><%= product.name.en %></th>
+                                        <th class="th-max-width"><%= product.name.ru %></th>
+                                        <th class="th-max-width"><%= product.collectionName %></th>
+                                        <th class="th-max-width"><%= product.productType.en %></th>
+                                        <th class="th-max-width"><%= product.productType.ru %></th>
+                                        <th class="th-max-width"><%= product.price %></th>
+                                        <th class="th-max-width"><%= product.color %></th>
+                                        <th class="th-max-width"><%= product.image %></th>
+                                        <th class="th-max-width"><%= product.isFeatured %></th>
+                                        <th class="th-max-width"><%= product.inStock %></th>
+                                        <td>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#editProductModal" class="edit" onclick="setEditModalData('<%= product._id %>', '<%= product.name.en %>', '<%= product.name.ru %>', '<%= product.collectionName %>', '<%= product.productType.en %>', '<%= product.productType.ru %>', '<%= product.price %>', '<%= product.color %>', '<%= product.image %>', '<%= product.isFeatured %>', '<%= product.inStock %>')"><i class="material-icons" title="<%= locale.edit %>">&#xE254;</i></a>
+                                            <a href="#" onclick="deleteProduct('<%= product._id %>')" class="delete"><i class="material-icons" title="<%= locale.delete %>">&#xE872;</i></a>
+                                        </td>
+                                    </tr>
+                                    <% }); %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        </div>
+        <!-- Add Product Modal HTML -->
+        <div id="addProductModal" class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <form id="addProductForm" >
+                        <div class="modal-header">						
+                            <h4 class="modal-title"><%= locale.addProduct %></h4>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                        </div>
+                        <div class="modal-body">					
+                            <div class="form-group mb-4">
+                                <label><%= locale.nameProductEn %></label>
+                                <input type="text" id="nameProductEn" name="name.en" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.nameProductRu %></label>
+                                <input type="text" id="nameProductRu" name="name.ru" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.collectionName %></label>
+                                <input type="text" id="collectionName" name="collectionName" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.productTypeEn %></label>
+                                <input type="text" id="productTypeEn" name="productType.en" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.productTypeRu %></label>
+                                <input type="text" id="productTypeRu" name="productType.ru"  class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.priceProduct %></label>
+                                <input type="number" id="price" name="price" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.colorProduct %></label>
+                                <input type="text" id="color" name="color" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.imageProduct %></label>
+                                <input type="text" id="image" name="image" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.isFeatured %></label>
+                                <input type="checkbox" id="isFeatured" name="isFeatured" >
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.inStock %></label>
+                                <input type="number" id="inStock" name="inStock" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-bs-dismiss="modal" value="<%= locale.cancel %>">
+                            <input type="submit" class="btn btn-primary" value="<%= locale.add %>">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Edit Product Modal HTML -->
+        <div id="editProductModal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <form id="editProductForm">
+                        <div class="modal-header">						
+                            <h4 class="modal-title"><%= locale.editProduct %></h4>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                        </div>
+                        <div class="modal-body">					
+                            <div class="form-group mb-4">
+                                <label><%= locale.nameProductEn %></label>
+                                <input type="text" id="editNameProductEn" name="productType.en"" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.nameProductRu %></label>
+                                <input type="text" id="editNameProductRu" name="name.ru" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.collectionName %></label>
+                                <input type="text" id="editCollectionName" name="collectionName" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.productTypeEn %></label>
+                                <input type="text" id="editProductTypeEn" name="productType.en" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.productTypeRu %></label>
+                                <input type="text" id="editProductTypeRu" name="productType.en" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.priceProduct %></label>
+                                <input type="number" id="editPrice" name="price" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.colorProduct %></label>
+                                <input type="text" id="editColor" name="color" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.imageProduct %></label>
+                                <input type="text" id="editImage" name="image" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.isFeatured %></label>
+                                <input type="checkbox" id="editIsFeatured" name="isFeatured">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label><%= locale.inStock %></label>
+                                <input type="number" id="editInStock" name="inStock" class="form-control" required>
+                            </div>			
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-bs-dismiss="modal" value="<%= locale.cancel %>">
+                            <input type="submit" class="btn btn-primary" value="<%= locale.save %>">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer bg-white text-center py-3">
+        <div class="container">
+            <a class="text-dark text-decoration-none" target="_blank" href="https://www.youtube.com/watch?v=gmqu-BLKE-k&list=PLo_wretdH6NvhfR-M9J0VVE1qeJI0weXy&index=1&ab_channel=ghostXD">© <%= new Date().getFullYear() %> <%= locale.madeBy %></a>
+        </div>
+    </footer>
+
+        
+</body>
+</html>
