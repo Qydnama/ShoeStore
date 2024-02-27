@@ -1,4 +1,4 @@
-# Weather Website using Node.js and MongoDB
+# Shoe Store Website using Node.js and MongoDB
 
 ## Getting Started
 
@@ -9,19 +9,18 @@
 
 ## Overview
 
-This is a Weather Forecast website developed using Node.js and MongoDB. The application allows users to check the weather on the given city and many more information. The project includes server-side logic for Weather API's, City API's. It has graphs for 16 days forecast, PDF file for full user requests info and Admin Page. 
+This is a Shoe Store website developed using Node.js and MongoDB. The application allows users to add products to cart and buy them. The project includes server-side logic for Currency API's, Cat API's. It has profile page where user can change his information and admin panel for managing users and products. 
 The Admin user is:
-email: amandik@gmail.com
+email: amandyk@gmail.com
 password: 123 
 
 ## API Services
 
 API services that were used:
 
-- **openweathermap:** For current weather status.
-- **weatherbit:** For 14 days weather forecast.
-- **ninjacity:** For city information.
-- **openstreetmap:** For map of the city using lat and long.
+- **currencyapi:** For giving current currency.
+- **thecatapi:** For cat photos.
+- **catfact.ninja:** For facts about cats.
 
 ## File Structure
 
@@ -40,10 +39,9 @@ Express.js is used for handling the server, running on port 3000 (`const port = 
 
 ## Integration of NPM Packages
 
-Twelve npm packages related to the project topic are integrated into the root JavaScript file: 
+Ten npm packages related to the project topic are integrated into the root JavaScript file: 
 - **axios**
 - **bcryptjs**
-- **dotenv**
 - **dotenv**
 - **ejs**
 - **express**
@@ -52,7 +50,7 @@ Twelve npm packages related to the project topic are integrated into the root Ja
 - **mongoose**
 - **morgan**
 - **path**
-- **pdfkit**
+
 
 
 
