@@ -10,9 +10,7 @@
 ## Overview
 
 This is a Shoe Store website developed using Node.js and MongoDB. The application allows users to add products to cart and buy them. The project includes server-side logic for Currency API's, Cat API's. It has profile page where user can change his information and admin panel for managing users and products. 
-The Admin user is:
-email: amandyk@gmail.com
-password: 123 
+
 
 ## API Services
 
